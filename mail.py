@@ -10,7 +10,7 @@ print(' ')
 for line in file:
     if line == '':
         line.remove()
-    elif line[0:4] == 'From':
+    elif line.startswith('From'):
         line = line.split()
         senders[line[1]] = senders.get(line[1],0) + 1
 
