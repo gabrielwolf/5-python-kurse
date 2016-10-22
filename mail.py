@@ -3,7 +3,7 @@ file = input('Welche Datei soll verwendet werden? ')
 # file = 'mail.txt'
 file = open(file,'r+')
 
-senders = []
+senders = dict()
 
 print(' ')
 
@@ -12,7 +12,7 @@ for line in file:
         line.remove()
     elif line[0:4] == 'From':
         line = line.split()
-        senders.append(line[1])
-        print(line[1])
+        senders[line[1]] = senders.get(line[1],0) + 1
 
-print('\nDie Datei enthält',len(senders),'Senderadressen.')
+print('Absender:',senders)
+print('\nDie Datei enthält',len(senders),'Absenderadressen.')
