@@ -1,13 +1,17 @@
 print('Das Script liest eine mbox-Datei ein und gibt die enthaltenen Senderadressen aus.')
-file = input('Welche Datei soll verwendet werden? ')
-# file = 'mail.txt'
-file = open(file,'r+')
+fname = input('Welche Datei soll verwendet werden? ')
+# fhand = 'mail.txt'
+try:
+    fhand = open(fname,'r+')
+except:
+    print('Datei konnte nicht geöffnet werden:', fname)
+    exit()
 
 senders = dict()
 
 print(' ')
 
-for line in file:
+for line in fhand:
     if line == '':
         line.remove()
     elif line.startswith('From'):
