@@ -1,10 +1,22 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+print('Dieses Script gibt nach der Eingabe von Zahlen die Größte und Kleinste aus.')
 
-largest = None
+def warnungAusgeben(text):
+    print ('\n\033[91m' + text + '\033[37m\n')
 
-for itervar in [3, 41, 12, 9, 74, 15]:
-    if largest is None or itervar > largest :
-        largest = itervar
+zahlen = []
+eingabe = ''
 
-print('Largest:', largest)
+while eingabe != 'ende':
+    while True:
+        eingabe = input('Bitte geben sie eine Zahl ein. Zum Beenden schreiben sie "ende": ')
+        try:
+            zahl = float(eingabe)
+            zahlen.append(zahl)
+            break
+        except ValueError:
+            if eingabe == 'ende':
+                break
+            else:
+                warnungAusgeben('Fehler! Bitte Zahl eingeben (z.B. 3, 34.2, -3)')
+
+print('Die Größte Zahl ist:',max(zahlen),'\nDie Kleinste:',min(zahlen))
