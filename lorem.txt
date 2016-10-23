@@ -1,7 +1,5 @@
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet asperiores quos ratione, cumque nostrum veritatis modi quasi explicabo aut impedit repellat, dolores, totam. Sed culpa atque consectetur deserunt fugiat quam!
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet asperiores quos ratione, cumque nostrum veritatis modi quasi explicabo aut impedit repellat, dolores, totam. Sed culpa atque consectetur deserunt fugiat quam!
+Das war aber ein sehr einzigartiger Text, in dem jedes Wort nur einmal vorkam.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet asperiores quos ratione, cumque nostrum veritatis modi quasi explicabo aut impedit repellat, dolores, totam. Sed culpa atque consectetur deserunt fugiat quam!
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet asperiores quos ratione, cumque nostrum veritatis modi quasi explicabo aut impedit repellat, dolores, totam. Sed culpa atque consectetur deserunt fugiat quam!
+Außer Lorem ipsum und dolor, die kommen zwei mal vor.
