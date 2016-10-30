@@ -8,17 +8,20 @@ except:
     exit()
 
 senders = dict()
-maxsender = None
-maxsendermails = None
 
 for line in fhand:
     if line.startswith('From '):
         line = line.split()
         senders[line[1]] = senders.get(line[1],0) + 1
 
-for sender in senders:
-    if maxsendermails is None or senders.get(sender) > maxsendermails:
-        maxsender = sender
-        maxsendermails = senders.get(sender)
+# Dictionary in Liste aus Tupeln kopieren um leicht nach der größten Anzahl an Mails sortieren zu können
+lst = list()
 
-print(maxsender,maxsendermails)
+for email, count in senders.items():
+    lst.append( ((count), (email)) )
+
+lst.sort(reverse=True)
+count, email = lst[0]
+
+#Ausgabe
+print(email, count)
