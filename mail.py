@@ -12,9 +12,7 @@ senders = dict()
 print(' ')
 
 for line in fhand:
-    if line == '':
-        line.remove()
-    elif line.startswith('From'):
+    if line.startswith('From'):
         line = line.split()
         senders[line[1]] = senders.get(line[1],0) + 1
 
