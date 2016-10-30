@@ -1,5 +1,3 @@
-from operator import itemgetter
-
 fhand = open('lorem.txt','r')
 
 dictionary = dict()
@@ -12,14 +10,14 @@ for line in fhand:
         dictionary[word] = dictionary.get(word,0) + 1
 
 # Dictionary in Liste kopieren
-lst = list(dictionary.keys())
-# print('Debug:',lst)
-for i in range(len(lst)):
-    lst[i] = [dictionary[lst[i]], lst[i]]
+lst = list()
+
+for key, val in list(dictionary.items()):
+    lst.append( (val, key) )
 
 # Nach Häufigkeit sortieren
-lst.sort(key=itemgetter(0), reverse=True)
+lst.sort(reverse=True)
 
 # Ausgabe
-for item in lst:
-    print(item[0],item[1])
+for key, val in lst[:100]:
+    print(key, val)
