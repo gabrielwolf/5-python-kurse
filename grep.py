@@ -7,9 +7,14 @@ fhand = open('mbox.txt')
 r = ''
 r = input('Gib einen regulären Ausdruck ein: ')
 counter = 0
+match = None
 
 for line in fhand:
-    match = re.findall(r, line)
+    try:
+        match = re.findall(r, line)
+    except re.error:
+        print('Leider kein korrekter regulärer Ausdruck.')
+        r = input('Gib einen regulären Ausdruck (Python) ein: ')
     if match != []:
         counter = counter + 1
 
