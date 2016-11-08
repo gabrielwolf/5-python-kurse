@@ -1,6 +1,3 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
 print('Spiel mit Zahlen.')
 
 def warnungAusgeben(text):

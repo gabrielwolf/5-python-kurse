@@ -1,6 +1,3 @@
-#!/usr/local/opt/python3/bin/python3.5
-# -*- coding: utf-8 -*-
-
 import locale
 locale.setlocale(locale.LC_ALL, 'de_DE')
 
