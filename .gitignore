@@ -1,2 +1,8 @@
 *.pyc
 test.py
+.sqlite
+Python 2/**/spider.sqlite_
+Python 2/code/gmane/content.sqlite
+Python 2/code/gmane/content.sqlite.zip
+Python 2/code/gmane/content.sqlite_myown
+Python 2/code/gmane/index.sqlite
